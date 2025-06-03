@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Igreja Recomeçar - Uma igreja para todos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero-bg {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://sojo.net/sites/default/files/blog/shutterstock_1659893.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .member-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .form-input:focus {
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Header/Navbar -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-cross text-blue-700 text-2xl"></i>
+                <h1 class="text-2xl font-bold text-blue-800">Igreja Recomeçar</h1>
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#home" class="text-gray-700 hover:text-blue-700 font-medium">Início</a>
+                <a href="#about" class="text-gray-700 hover:text-blue-700 font-medium">Sobre</a>
+                <a href="#ministries" class="text-gray-700 hover:text-blue-700 font-medium">Ministérios</a>
+                <a href="#members" class="text-gray-700 hover:text-blue-700 font-medium">Membros</a>
+                <a href="#contact" class="text-gray-700 hover:text-blue-700 font-medium">Contato</a>
+            </nav>
+            <button class="md:hidden text-gray-700" id="menu-toggle">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden bg-white w-full py-4 px-4 shadow-lg" id="mobile-menu">
+            <div class="flex flex-col space-y-4">
+                <a href="#home" class="text-gray-700 hover:text-blue-700 font-medium">Início</a>
+                <a href="#about" class="text-gray-700 hover:text-blue-700 font-medium">Sobre</a>
+                <a href="#ministries" class="text-gray-700 hover:text-blue-700 font-medium">Ministérios</a>
+                <a href="#members" class="text-gray-700 hover:text-blue-700 font-medium">Membros</a>
+                <a href="#contact" class="text-gray-700 hover:text-blue-700 font-medium">Contato</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg text-white py-20 md:py-32 fade-in">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">Bem-vindo à Igreja Recomeçar</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Uma comunidade onde você pode encontrar esperança, amor e um novo começo em Cristo.</p>
+            <div class="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-4">
+                <a href="#contact" class="bg-blue-700 hover:bg-blue-800 text-white font-bold py-3 px-6 rounded-full transition duration-300">Visite-nos</a>
+                <a href="#members" class="bg-white hover:bg-gray-100 text-blue-700 font-bold py-3 px-6 rounded-full transition duration-300">Cadastre-se</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-blue-800 mb-4">Sobre Nós</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+            <div class="flex flex-col md:flex-row items-center gap-8">
+                <div class="md:w-1/2">
+                    <img src="https://i.im.ge/2025/06/02/vBekhM.image.png">
+                </div>
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Nossa História</h3>
+                    <p class="text-gray-600 mb-4">A Igreja Recomeçar foi fundada em 2020 com o propósito de oferecer um lugar de acolhimento e renovação espiritual. Acreditamos que em Cristo todos têm a oportunidade de um novo começo, independente de seu passado.</p>
+                    <p class="text-gray-600 mb-6">Nossa missão é levar a mensagem transformadora do Evangelho, promovendo o amor, a reconciliação e o crescimento espiritual de nossos membros.</p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <i class="fas fa-heart text-blue-700 text-2xl mb-2"></i>
+                            <h4 class="font-bold text-gray-800">Missão</h4>
+                            <p class="text-gray-600 text-sm">Amar a Deus và ao próximo como a nós mesmos.</p>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <i class="fas fa-eye text-blue-700 text-2xl mb-2"></i>
+                            <h4 class="font-bold text-gray-800">Visão</h4>
+                            <p class="text-gray-600 text-sm">Ser uma comunidade de fé que transforma vidas.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ministries Section -->
+    <section id="ministries" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-blue-800 mb-4">Nossos Ministérios</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Ministry 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                    <div class="text-blue-700 mb-4">
+                        <i class="fas fa-music text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Louvor e Adoração</h3>
+                    <p class="text-gray-600 mb-4">Ministério responsável por levar a congregação a adorar a Deus em espírito e em verdade através da música.</p>
+                    <a href="#" class="text-blue-700 font-medium hover:text-blue-900"> </a>
+                </div>
+                
+                <!-- Ministry 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                    <div class="text-blue-700 mb-4">
+                        <i class="fas fa-child text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Ministério Infantil</h3>
+                    <p class="text-gray-600 mb-4">Ensino bíblico criativo e divertido para crianças de 0 a 12 anos, formando uma geração que ama a Deus.</p>
+                    <a href="#" class="text-blue-700 font-medium hover:text-blue-900"></a>
+                </div>
+                
+                <!-- Ministry 3 -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                    <div class="text-blue-700 mb-4">
+                        <i class="fas fa-hands-helping text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Ação Social</h3>
+                    <p class="text-gray-600 mb-4">Levar amor e cuidado prático à comunidade através de projetos sociais e assistenciais.</p>
+                    <a href="#" class="text-blue-700 font-medium hover:text-blue-900"></a>
+                </div>
+                
+                <!-- Ministry 4 -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                    <div class="text-blue-700 mb-4">
+                        <i class="fas fa-bible text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Escola Bíblica</h3>
+                    <p class="text-gray-600 mb-4">Estudo aprofundado da Palavra de Deus para crescimento espiritual e discipulado.</p>
+                    <a href="#" class="text-blue-700 font-medium hover:text-blue-900"></a>
+                </div>
+                
+                <!-- Ministry 5 -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                    <div class="text-blue-700 mb-4">
+                        <i class="fas fa-users text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Jovens</h3>
+                    <p class="text-gray-600 mb-4">Ministério que reúne jovens para adorar, estudar a Bíblia e desenvolver relacionamentos saudáveis.</p>
+                    <a href="#" class="text-blue-700 font-medium hover:text-blue-900"></a>
+                </div>
+                
+                <!-- Ministry 6 -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                    <div class="text-blue-700 mb-4">
+                        <i class="fas fa-pray text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Intercessão</h3>
+                    <p class="text-gray-600 mb-4">Grupo dedicado à oração por necessidades da igreja, membros e comunidade.</p>
+                    <a href="#" class="text-blue-700 font-medium hover:text-blue-900"></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Members Section -->
+    <section id="members" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-blue-800 mb-4">Cadastro de Membros</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+                <p class="text-gray-600 mt-4 max-w-2xl mx-auto">Junte-se à nossa família espiritual. Preencha o formulário abaixo para se cadastrar como membro da Igreja Recomeçar.</p>
+            </div>
+            
+            <div class="flex flex-col lg:flex-row gap-8">
+                <!-- Member Registration Form -->
+                <div class="lg:w-1/2">
+                    <form id="memberForm" class="bg-gray-50 p-6 rounded-lg shadow-md">
+                        <div class="mb-4">
+                            <label for="name" class="block text-gray-700 font-medium mb-2">Nome Completo*</label>
+                            <input type="text" id="name" class="form-input w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500" required>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                            <div>
+                                <label for="birthdate" class="block text-gray-700 font-medium mb-2">Data de Nascimento*</label>
+                                <input type="date" id="birthdate" class="form-input w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500" required>
+                            </div>
+                            <div>
+                                <label for="phone" class="block text-gray-700 font-medium mb-2">Telefone*</label>
+                                <input type="tel" id="phone" class="form-input w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500" required>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="email" class="block text-gray-700 font-medium mb-2">Email</label>
+                            <input type="email" id="email" class="form-input w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500">
+                        </div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                            <div>
+                                <label for="address" class="block text-gray-700 font-medium mb-2">Endereço</label>
+                                <input type="text" id="address" class="form-input w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500">
+                            </div>
+                            <div>
+                                <label for="city" class="block text-gray-700 font-medium mb-2">Cidade</label>
+                                <input type="text" id="city" class="form-input w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500">
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label class="block text-gray-700 font-medium mb-2">Gênero</label>
+                            <div class="flex space-x-4">
+                                <label class="inline-flex items-center">
+                                    <input type="radio" name="gender" value="male" class="text-blue-600 focus:ring-blue-500">
+                                    <span class="ml-2">Masculino</span>
+                                </label>
+                                <label class="inline-flex items-center">
+                                    <input type="radio" name="gender" value="female" class="text-blue-600 focus:ring-blue-500">
+                                    <span class="ml-2">Feminino</span>
+                                </label>
+                                <label class="inline-flex items-center">
+                                    <input type="radio" name="gender" value="other" class="text-blue-600 focus:ring-blue-500">
+                                    <span class="ml-2">Outro</span>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="ministries" class="block text-gray-700 font-medium mb-2">Ministérios de Interesse (opcional)</label>
+                            <select id="ministries" multiple class="form-input w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 h-auto">
+                                <option value="worship">Louvor e Adoração</option>
+                                <option value="children">Ministério Infantil</option>
+                                <option value="social">Ação Social</option>
+                                <option value="bible">Visitante</option>
+                                <option value="youth">Jovens</option>
+                                <option value="prayer">Intercessão</option>
+                                <option value="prayer">Obreiro</option>
+                            </select>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-blue-700 hover:bg-blue-800 text-white font-bold py-3 px-4 rounded-lg transition duration-300">
+                            Cadastrar
+                        </button>
+                    </form>
+                </div>
+                
+                <!-- Members List -->
+                <div class="lg:w-1/2">
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold text-gray-800 mb-6">Nossos Membros</h3>
+                        
+                        <div class="space-y-4" id="membersList">
+                            <!-- Sample members - these would be populated by JavaScript -->
+                            <div class="member-card bg-white p-4 rounded-lg shadow-sm transition duration-300 flex items-center">
+                                <div class="bg-blue-100 text-blue-700 rounded-full w-12 h-12 flex items-center justify-center mr-4">
+                                    <i class="fas fa-user text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800">Pastor Tadeu Silva</h4>
+                                    <p class="text-gray-600 text-sm">Membro desde 2020</p>
+                                </div>
+                            </div>
+                            
+                            <div class="member-card bg-white p-4 rounded-lg shadow-sm transition duration-300 flex items-center">
+                                <div class="bg-blue-100 text-blue-700 rounded-full w-12 h-12 flex items-center justify-center mr-4">
+                                    <i class="fas fa-user text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800">Marta Silva</h4>
+                                    <p class="text-gray-600 text-sm">Membro desde 2020</p>
+                                </div>
+                            </div>
+                            
+                            <div class="member-card bg-white p-4 rounded-lg shadow-sm transition duration-300 flex items-center">
+                                <div class="bg-blue-100 text-blue-700 rounded-full w-12 h-12 flex items-center justify-center mr-4">
+                                    <i class="fas fa-user text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800">Pastor João</h4>
+                                    <p class="text-gray-600 text-sm">Membro desde 2020</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-6">
+                            <h4 class="font-bold text-gray-800 mb-2">Total de Membros: <span id="totalMembers">3</span></h4>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="bg-blue-600 h-2.5 rounded-full" style="width: 100%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-blue-800 mb-4">Entre em Contato</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+            
+            <div class="flex flex-col lg:flex-row gap-8">
+                <div class="lg:w-1/2">
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">Informações de Contato</h3>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <i class="fas fa-map-marker-alt text-blue-700 mt-1 mr-3"></i>
+                                <div>
+                                    <h4 class="font-medium text-gray-800">Endereço</h4>
+                                    <p class="text-gray-600">Rua Quinza de Novembro, 111 - Centro, Santa Adélia - SP</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <i class="fas fa-phone-alt text-blue-700 mt-1 mr-3"></i>
+                                <div>
+                                    <h4 class="font-medium text-gray-800">Telefone</h4>
+                                    <p class="text-gray-600">(17) 99656-5791</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <i class="fas fa-envelope text-blue-700 mt-1 mr-3"></i>
+                                <div>
+                                    <h4 class="font-medium text-gray-800">Email</h4>
+                                    <p class="text-gray-600">ministeriorecomecar@gmail.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <i class="fas fa-clock text-blue-700 mt-1 mr-3"></i>
+                                <div>
+                                    <h4 class="font-medium text-gray-800">Horários de Culto</h4>
+                                    <p class="text-gray-600">Domingo: 19h <br>Sexta-feira: 19h</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-6">
+                            <h4 class="font-medium text-gray-800 mb-3">Siga-nos</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="text-blue-700 hover:text-blue-900 text-2xl"><i class="fab fa-facebook"></i></a>
+                                <a href="#" class="text-blue-700 hover:text-blue-900 text-2xl"><i class="fab fa-instagram"></i></a>
+                                <a href="#" class="text-blue-700 hover:text-blue-900 text-2xl"><i class="fab fa-youtube"></i></a>
+                                <a href="#" class="text-blue-700 hover:text-blue-900 text-2xl"><i class="fab fa-whatsapp"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">Envie uma Mensagem</h3>
+                        <form id="contactForm">
+                            <div class="mb-4">
+                                <label for="contactName" class="block text-gray-700 font-medium mb-2">Seu Nome*</label>
+                                <input type="text" id="contactName" class="form-input w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500" required>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label for="contactEmail" class="block text-gray-700 font-medium mb-2">Seu Email*</label>
+                                <input type="email" id="contactEmail" class="form-input w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500" required>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label for="contactSubject" class="block text-gray-700 font-medium mb-2">Assunto</label>
+                                <input type="text" id="contactSubject" class="form-input w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500">
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label for="contactMessage" class="block text-gray-700 font-medium mb-2">Mensagem*</label>
+                                <textarea id="contactMessage" rows="4" class="form-input w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500" required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="w-full bg-blue-700 hover:bg-blue-800 text-white font-bold py-3 px-4 rounded-lg transition duration-300">
+                                Enviar Mensagem
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!-- Footer -->
+    <footer class="bg-blue-900 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <div class="flex items-center space-x-2">
+                        <i class="fas fa-cross text-white text-2xl"></i>
+                        <h2 class="text-2xl font-bold">Igreja Recomeçar</h2>
+                    </div>
+                    <p class="mt-2 text-blue-200">Uma igreja para todos!
+                </div>
+                
+                <div class="flex flex-col md:flex-row md:space-x-8 space-y-4 md:space-y-0 text-center md:text-left">
+                    <div>
+                        <h3 class="font-bold mb-2">Links Rápidos</h3>
+                        <ul class="space-y-1">
+                            <li><a href="#home" class="text-blue-200 hover:text-white">Início</a></li>
+                            <li><a href="#about" class="text-blue-200 hover:text-white">Sobre</a></li>
+                            <li><a href="#ministries" class="text-blue-200 hover:text-white">Ministérios</a></li>
+                            <li><a href="#members" class="text-blue-200 hover:text-white">Membros</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h3 class="font-bold mb-2">Recursos</h3>
+                        <ul class="space-y-1">
+                            <li><a href="#" class="text-blue-200 hover:text-white">Sermões</a></li>
+                            <li><a href="#" class="text-blue-200 hover:text-white">Eventos</a></li>
+                            <li><a href="#" class="text-blue-200 hover:text-white">Doações</a></li>
+                            <li><a href="#" class="text-blue-200 hover:text-white">Blog</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h3 class="font-bold mb-2">Legal</h3>
+                        <ul class="space-y-1">
+                            <li><a href="#" class="text-blue-200 hover:text-white">Política de Privacidade</a></li>
+                            <li><a href="#" class="text-blue-200 hover:text-white">Termos de Uso</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-blue-800 mt-8 pt-6 text-center text-blue-300">
+                <p>&copy; 2023 Igreja Recomeçar. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="fixed bottom-6 right-6 bg-blue-700 text-white w-12 h-12 rounded-full shadow-lg hidden items-center justify-center">
+        <i class="fas fa-arrow-up text-xl"></i>
+    </button>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <div class="bg-white p-8 rounded-lg max-w-md mx-4 text-center">
+            <div class="text-green-500 text-5xl mb-4">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-800 mb-2">Cadastro realizado!</h3>
+            <p class="text-gray-600 mb-6">Seu cadastro foi realizado com sucesso. Bem-vindo à família da Igreja Recomeçar!</p>
+            <button id="closeModal" class="bg-blue-700 hover:bg-blue-800 text-white font-bold py-2 px-6 rounded-lg transition duration-300">
+                Fechar
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Back to top button
+        const backToTopButton = document.getElementById('backToTop');
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('hidden');
+                backToTopButton.classList.add('flex');
+            } else {
+                backToTopButton.classList.add('hidden');
+                backToTopButton.classList.remove('flex');
+            }
+        });
+
+        backToTopButton.addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Member registration form
+        const memberForm = document.getElementById('memberForm');
+        const membersList = document.getElementById('membersList');
+        const totalMembers = document.getElementById('totalMembers');
+        const successModal = document.getElementById('successModal');
+        const closeModal = document.getElementById('closeModal');
+
+        memberForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('name').value;
+            const birthdate = document.getElementById('birthdate').value;
+            const phone = document.getElementById('phone').value;
+            
+            // Create new member card
+            const memberCard = document.createElement('div');
+            memberCard.className = 'member-card bg-white p-4 rounded-lg shadow-sm transition duration-300 flex items-center';
+            
+            const avatar = document.createElement('div');
+            avatar.className = 'bg-blue-100 text-blue-700 rounded-full w-12 h-12 flex items-center justify-center mr-4';
+            avatar.innerHTML = '<i class="fas fa-user text-xl"></i>';
+            
+            const memberInfo = document.createElement('div');
+            const memberName = document.createElement('h4');
+            memberName.className = 'font-bold text-gray-800';
+            memberName.textContent = name;
+            
+            const memberSince = document.createElement('p');
+            memberSince.className = 'text-gray-600 text-sm';
+            const currentYear = new Date().getFullYear();
+            memberSince.textContent = `Membro desde ${currentYear}`;
+            
+            memberInfo.appendChild(memberName);
+            memberInfo.appendChild(memberSince);
+            
+            memberCard.appendChild(avatar);
+            memberCard.appendChild(memberInfo);
+            
+            // Add to members list
+            membersList.insertBefore(memberCard, membersList.firstChild);
+            
+            // Update total members count
+            const currentTotal = parseInt(totalMembers.textContent);
+            totalMembers.textContent = currentTotal + 1;
+            
+            // Show success modal
+            successModal.classList.remove('hidden');
+            
+            // Reset form
+            memberForm.reset();
+        });
+
+        closeModal.addEventListener('click', function() {
+            successModal.classList.add('hidden');
+        });
+
+        // Contact form
+        const contactForm = document.getElementById('contactForm');
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Mensagem enviada com sucesso! Entraremos em contato em breve.');
+            contactForm.reset();
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+
+        // Add fade-in animation to sections when scrolling
+        const fadeElements = document.querySelectorAll('.fade-in');
+        
+        const fadeInOnScroll = function() {
+            fadeElements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                
+                if (elementTop < windowHeight - 100) {
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
+                }
+            });
+        };
+        
+        window.addEventListener('scroll', fadeInOnScroll);
+        window.addEventListener('load', fadeInOnScroll);
+    </script>
+</body>
+</html>
